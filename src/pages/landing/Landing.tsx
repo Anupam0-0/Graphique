@@ -8,8 +8,7 @@ import Footer from "./Footer"
 
 const App = () => {
   return (
-    <div>
-    
+    <div>    
     <Head/>
     <Secondary />
     <Tertiary />
