@@ -1,19 +1,13 @@
-import React from "react";
-
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../components/ui/accordion";
+} from "../components/ui/accordion"
 
-const FAQ = () => {
+export function AccordionDemo() {
   return (
-    <div>
-      <div>
-        
-      </div>
-      <Accordion type="single" collapsible className="w-full">
+    <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>
@@ -34,8 +28,6 @@ const FAQ = () => {
         </AccordionContent>
       </AccordionItem>
     </Accordion>
-    </div>
   )
-};
+}
 
-export default FAQ;

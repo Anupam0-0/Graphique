@@ -2,12 +2,15 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { FaGithub } from "react-icons/fa";
 import { RiMenuFill } from "react-icons/ri";
-import { GoChevronDown } from "react-icons/go";
 import { IoMdClose } from "react-icons/io";
-
+import { GoChevronDown } from "react-icons/go";
+import { Sidebar } from "./Sidebar";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
   return (
     <div>
@@ -16,78 +19,76 @@ const Navbar = () => {
              bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]
      text-neutral-950 hover:text-neutral-800 px-4 md:px-8 lg:px-16 opacity-100"
       >
-        {/* <Background /> */}
         <Link to="/" className="text-3xl font-bold">
           Graphique
         </Link>
 
-        <div className=" flex-row items-center gap-6 hidden lg:flex">
-          <div className="flex-row items-center flex gap-4  text-lg">
+        <div className="flex-row items-center gap-6 hidden lg:flex">
+          <div className="flex-row items-center flex gap-4 text-lg">
             <Link to="/" className="p-3">
               Home
             </Link>
-            <Link to="#" className="p-3">
-              <Features />
-            </Link>
+            <div className="relative">
+              <button
+                onClick={toggleDropdown}
+                className="p-3 flex items-center"
+                aria-haspopup="true"
+                aria-expanded={isDropdownOpen}
+              >
+                Features <GoChevronDown className={`ml-1 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isDropdownOpen && <FeaturesDropdown />}
+            </div>
             <Link to="/main" className="p-3">
-              {" "}
-              Main{" "}
+              Main
             </Link>
           </div>
-
-          <div className="flex items-center gap-3"></div>
         </div>
         <div className="flex items-center gap-3">
-          <Link to={'/#'} className="h-9 w-9 hidden lg:flex sm:w-fit font-medium sm:scale-100 sm:py-5 sm:px-2.5  justify-center items-center rounded-3xl bg-slate-50 border hover:bg-slate-950 hover:text-slate-50 ">
-            {" "}
-            <FaGithub /> &nbsp; <span className="hidden sm:block">
-              {" "}
-              Github
-            </span>{" "}
+          <Link to={'/#'} className="h-9 w-9 hidden lg:flex sm:w-fit font-medium sm:scale-100 sm:py-5 sm:px-2.5 justify-center items-center rounded-3xl bg-slate-50 border hover:bg-slate-950 hover:text-slate-50">
+            <FaGithub /> &nbsp; <span className="hidden sm:block">Github</span>
           </Link>
           <Link to={'/auth/login'} className="h-9 w-9 hidden lg:flex sm:w-fit font-medium sm:scale-100 sm:py-5 sm:px-2.5 justify-center items-center rounded-3xl bg-slate-50 border hover:bg-slate-950 hover:text-slate-50">
             &nbsp; <span className="hidden sm:block">Log in</span>
           </Link>
-          {isNavOpen ? (
-            <span
-              className="text-3xl block lg:hidden hover:opacity-90"
-              onClick={() => setIsNavOpen(false)}
-            >
-              <IoMdClose />
-            </span>
-          ) : (
-            <span
-              className="text-3xl block lg:hidden hover:opacity-90"
-              onClick={() => setIsNavOpen(true)}
-            >
-              <RiMenuFill />
-            </span>
-          )}
+          <button
+            className="text-3xl block lg:hidden hover:opacity-90"
+            onClick={() => setIsNavOpen(!isNavOpen)}
+            aria-label={isNavOpen ? "Close menu" : "Open menu"}
+          >
+            {isNavOpen ? <IoMdClose /> : <RiMenuFill />}
+          </button>
         </div>
       </div>
 
-      {/* SIdeBar */}
-      <div>
-        <Sidebar isNavOpen={isNavOpen} />
-      </div>
+      <Sidebar isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
     </div>
   );
 };
 
 export default Navbar;
 
-function Features() {
+const FeaturesDropdown = () => {
   return (
-    <div className="flex items-center">
-      Features &nbsp; <GoChevronDown />{" "}
+    <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
+      <ul className="py-1">
+        <li>
+          <Link to="/feature1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+            Feature 1
+          </Link>
+        </li>
+        <li>
+          <Link to="/feature2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+            Feature 2
+          </Link>
+        </li>
+        <li>
+          <Link to="/feature3" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+            Feature 3
+          </Link>
+        </li>
+      </ul>
     </div>
   );
-}
+};
 
-function Sidebar({ isNavOpen }: { isNavOpen: boolean }) {
-  return (
-    <div className={`h-screen opacity-100 z-100 w-full bg-slate-950 fixed top-0 transition ease-in-out duration-500 ${isNavOpen ? 'right-0' : '-right-full'}`}>
-      Sidebar
-    </div>
-  );
-}
