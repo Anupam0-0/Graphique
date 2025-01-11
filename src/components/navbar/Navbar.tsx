@@ -48,7 +48,7 @@ const Navbar = () => {
           <Link to={'/#'} className="h-9 w-9 hidden lg:flex sm:w-fit font-medium sm:scale-100 sm:py-5 sm:px-2.5 justify-center items-center rounded-3xl bg-slate-50 border hover:bg-slate-950 hover:text-slate-50">
             <FaGithub /> &nbsp; <span className="hidden sm:block">Github</span>
           </Link>
-          <Link to={'/auth/login'} className="h-9 w-9 hidden lg:flex sm:w-fit font-medium sm:scale-100 sm:py-5 sm:px-2.5 justify-center items-center rounded-3xl bg-slate-50 border hover:bg-slate-950 hover:text-slate-50">
+          <Link to={'https://graphi-que.vercel.app/'} className="h-9 w-9 hidden lg:flex sm:w-fit font-medium sm:scale-100 sm:py-5 sm:px-2.5 justify-center items-center rounded-3xl bg-slate-50 border hover:bg-slate-950 hover:text-slate-50">
             &nbsp; <span className="hidden sm:block">Log in</span>
           </Link>
           <button

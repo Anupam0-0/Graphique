@@ -1,3 +1,5 @@
+import React from 'react'
+import { Link } from 'react-router'
 
 
 const Head = () => {
@@ -14,7 +16,7 @@ const Head = () => {
           Graphique is an open-source graphic design tool <br/> inspired by Canva
         </p>
         <div className='flex justify-center mt-8'>
-            <MainButton />
+           <Link to={'https://graphi-que.vercel.app/'}> <MainButton  /></Link>
         </div>
 
     </div>
