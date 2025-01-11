@@ -1,10 +1,10 @@
-import React from 'react'
+// import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Navbar from './components/navbar/Navbar';
 import LandingApp from './pages/landing/Landing';
-import Login from './pages/auth/Login';
-import Signup from './pages/auth/Signup';
-import MainApp from './pages/main/app';
+// import Login from './pages/auth/Login';
+// import Signup from './pages/auth/Signup';
+import MainApp from './pages/pricing/app';
 import './index.css';
 
 
@@ -19,8 +19,8 @@ const App = () => {
         <Route path="/" element={ <><Navbar /> <LandingApp /> </>} />
 
         {/* Auth Routes */}
-        <Route path="/auth/login" element={<Login />} />
-        <Route path="/auth/signup" element={<Signup />} />
+        {/* <Route path="/auth/login" element={<Login />} />
+        <Route path="/auth/signup" element={<Signup />} /> */}
 
         {/* Main App */}
         <Route path="/main" element={<MainApp />} />

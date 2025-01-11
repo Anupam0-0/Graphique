@@ -35,12 +35,12 @@ const Navbar = () => {
                 aria-haspopup="true"
                 aria-expanded={isDropdownOpen}
               >
-                Features <GoChevronDown className={`ml-1 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                Docs <GoChevronDown className={`ml-1 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
               {isDropdownOpen && <FeaturesDropdown />}
             </div>
             <Link to="/main" className="p-3">
-              Main
+              Pricing
             </Link>
           </div>
         </div>
@@ -70,21 +70,21 @@ export default Navbar;
 
 const FeaturesDropdown = () => {
   return (
-    <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
-      <ul className="py-1">
+    <div className="absolute top-full   w-40 bg-white border border-gray-200 rounded-md shadow-lg">
+      <ul className=" text-center  py-2 px-2 gap-2  w-full">
         <li>
-          <Link to="/feature1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-            Feature 1
+          <Link to="/feature1" className="block px-4  py-2  text-sm text-gray-700 rounded hover:bg-gray-100">
+            Documentation
           </Link>
         </li>
         <li>
-          <Link to="/feature2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-            Feature 2
+          <Link to="/feature2" className="block px-4 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+            Source Code
           </Link>
         </li>
         <li>
-          <Link to="/feature3" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-            Feature 3
+          <Link to="/feature3" className="block px-4 py-2 text-sm text-gray-700 rounded hover:bg-gray-100">
+            Examples
           </Link>
         </li>
       </ul>

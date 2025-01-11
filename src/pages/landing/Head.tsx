@@ -5,8 +5,8 @@ const Head = () => {
     <main className='flex justify-center h-screen lg:h-[96vh] w-full'>
       <Background />
 
-      <div className="top-0 sm:top-48 p-4 mx-auto relative w-full md:pt-0 scale-50 sm:scale-100">
-        <h1 className="text-6xl pb-4 font-extrabold tracking-wide text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 to-neutral-600 bg-opacity-50">
+      <div className="w-full sm:top-48 p-4 mx-auto relative md:pt-0 scale-50 sm:scale-100">
+        <h1 className=" text-8xl pb-4 font-extrabold tracking-wide text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 to-neutral-600 bg-opacity-50">
           Definitely <span className='text-red-500'>not</span>  Canva
             <br /> But something cool
         </h1>

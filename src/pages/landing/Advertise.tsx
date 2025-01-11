@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 import { AnimatedGroup } from "../../components/ui/animated-group";
 import { InView } from "../../components/ui/in-view";
 import { Tilt } from "../../components/ui/tilt";
@@ -8,8 +8,8 @@ import { Tilt } from "../../components/ui/tilt";
 
 const Advertise = () => {
   return (
-    <div className="h-fit py-12 pt-16 bg-slate-950 ">
-      <div className="text-slate-100 flex h-full justify-center items-center text-7xl font-bold tracking-wide">
+    <div className="h-fit py-12 pt-12 bg-slate-950 ">
+      <div className="text-slate-100 flex h-full justify-center items-center text-4xl md:text-5xl lg:text-7xl font-bold tracking-wide mb-8">
         Advertise Features
       </div>
       <InView
@@ -18,10 +18,10 @@ const Advertise = () => {
           visible: { opacity: 1, y: 0, filter: "blur(0px)" },
         }}
         viewOptions={{ margin: "0px 0px -200px 0px" }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+        transition={{ ease: "easeInOut", staggerChildren: 0.5 }}
       >
         <AnimatedGroup
-          className="grid grid-cols-2 gap-4 p-16 md:grid-cols-3 lg:grid-cols-4"
+          className="grid grid-cols-1 gap-4 py-4 px-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           variants={{
             container: {
               hidden: { opacity: 0 },
@@ -47,18 +47,17 @@ const Advertise = () => {
             },
           }}
         >
-          <div className="h-96 w-80 bg-slate-800 rounded-[4px]"></div>
           <Tilt rotationFactor={8} isRevese>
             <div
               style={{
                 borderRadius: "12px",
               }}
-              className="flex max-w-[330px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
+              className="flex max-w-full sm:max-w-[330px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
             >
               <img
                 src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
                 alt="Ghost in the shell - Kôkaku kidôtai"
-                className="h-48 w-full object-cover"
+                className="h-32 sm:h-40 md:h-48 w-full object-cover"
               />
               <div className="p-2">
                 <h1 className="font-mono leading-snug text-zinc-950 dark:text-zinc-50">
@@ -75,12 +74,12 @@ const Advertise = () => {
               style={{
                 borderRadius: "12px",
               }}
-              className="flex max-w-[330px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
+              className="flex max-w-full sm:max-w-[330px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
             >
               <img
                 src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
                 alt="Ghost in the shell - Kôkaku kidôtai"
-                className="h-48 w-full object-cover"
+                className="h-32 sm:h-40 md:h-48 w-full object-cover"
               />
               <div className="p-2">
                 <h1 className="font-mono leading-snug text-zinc-950 dark:text-zinc-50">
@@ -91,8 +90,51 @@ const Advertise = () => {
                 </p>
               </div>
             </div>
-          </Tilt>          
-          <div className="h-96 w-80 bg-slate-800 rounded-[4px]"></div>
+          </Tilt>
+          <Tilt rotationFactor={8} isRevese>
+            <div
+              style={{
+                borderRadius: "12px",
+              }}
+              className="flex max-w-full sm:max-w-[330px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
+            >
+              <img
+                src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
+                alt="Ghost in the shell - Kôkaku kidôtai"
+                className="h-32 sm:h-40 md:h-48 w-full object-cover"
+              />
+              <div className="p-2">
+                <h1 className="font-mono leading-snug text-zinc-950 dark:text-zinc-50">
+                  Ghost in the Shell
+                </h1>
+                <p className="text-zinc-700 dark:text-zinc-400">
+                  Kôkaku kidôtai
+                </p>
+              </div>
+            </div>
+          </Tilt>
+          <Tilt rotationFactor={8} isRevese>
+            <div
+              style={{
+                borderRadius: "12px",
+              }}
+              className="flex max-w-full sm:max-w-[330px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
+            >
+              <img
+                src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
+                alt="Ghost in the shell - Kôkaku kidôtai"
+                className="h-32 sm:h-40 md:h-48 w-full object-cover"
+              />
+              <div className="p-2">
+                <h1 className="font-mono leading-snug text-zinc-950 dark:text-zinc-50">
+                  Ghost in the Shell
+                </h1>
+                <p className="text-zinc-700 dark:text-zinc-400">
+                  Kôkaku kidôtai
+                </p>
+              </div>
+            </div>
+          </Tilt>{" "}
         </AnimatedGroup>
       </InView>
     </div>
