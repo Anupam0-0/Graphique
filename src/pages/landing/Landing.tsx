@@ -12,7 +12,8 @@ const App = () => {
     <Head/>
     <Secondary />
     <Tertiary />
-    <Advertise />
+
+    {/* <Advertise /> */}
     <FAQ />
     <Footer />
 
