@@ -1,7 +1,7 @@
 import Head from "./Head"
 import Secondary from "./Secondary"
 import Tertiary from "./Tertiary"
-import Advertise from "./Advertise"
+// import Advertise from "./Advertise"
 import FAQ from "./FAQ"
 import Footer from "./Footer"
 
