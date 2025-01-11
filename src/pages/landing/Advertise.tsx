@@ -10,15 +10,15 @@ const Advertise = () => {
   return (
     <div className="h-fit py-12 pt-12 bg-slate-950 ">
       <div className="text-slate-100 flex h-full justify-center items-center text-4xl md:text-5xl lg:text-7xl font-bold tracking-wide mb-8">
-        Advertise Features
+       <span className="text-white">Capstone</span> &nbsp;  Features
       </div>
       <InView
-        variants={{
-          hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
-          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-        }}
+        // variants={{
+        //   hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+        //   visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+        // }}
         viewOptions={{ margin: "0px 0px -200px 0px" }}
-        transition={{ ease: "easeInOut", staggerChildren: 0.5 }}
+        transition={{ ease: "easeInOut", duration: 0.5 , staggerChildren: 2 }}
       >
         <AnimatedGroup
           className="grid grid-cols-1 gap-4 py-4 px-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
@@ -56,16 +56,14 @@ const Advertise = () => {
             >
               <img
                 src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
-                alt="Ghost in the shell - Kôkaku kidôtai"
-                className="h-32 sm:h-40 md:h-48 w-full object-cover"
+                alt="Feature"
+                className="h-48 md:h-48 w-full object-cover"
               />
               <div className="p-2">
-                <h1 className="font-mono leading-snug text-zinc-950 dark:text-zinc-50">
+                <h1 className="font-mono text-center leading-snug text-zinc-950 dark:text-zinc-50">
                   Ghost in the Shell
                 </h1>
-                <p className="text-zinc-700 dark:text-zinc-400">
-                  Kôkaku kidôtai
-                </p>
+                
               </div>
             </div>
           </Tilt>
@@ -78,16 +76,14 @@ const Advertise = () => {
             >
               <img
                 src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
-                alt="Ghost in the shell - Kôkaku kidôtai"
-                className="h-32 sm:h-40 md:h-48 w-full object-cover"
+                alt="Feature"
+                className="h-48 md:h-48 w-full object-cover"
               />
               <div className="p-2">
-                <h1 className="font-mono leading-snug text-zinc-950 dark:text-zinc-50">
+                <h1 className="font-mono text-center leading-snug text-zinc-950 dark:text-zinc-50">
                   Ghost in the Shell
                 </h1>
-                <p className="text-zinc-700 dark:text-zinc-400">
-                  Kôkaku kidôtai
-                </p>
+                
               </div>
             </div>
           </Tilt>
@@ -100,16 +96,14 @@ const Advertise = () => {
             >
               <img
                 src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
-                alt="Ghost in the shell - Kôkaku kidôtai"
-                className="h-32 sm:h-40 md:h-48 w-full object-cover"
+                alt="Feature"
+                className="h-48 md:h-48 w-full object-cover"
               />
               <div className="p-2">
-                <h1 className="font-mono leading-snug text-zinc-950 dark:text-zinc-50">
+                <h1 className="font-mono text-center leading-snug text-zinc-950 dark:text-zinc-50">
                   Ghost in the Shell
                 </h1>
-                <p className="text-zinc-700 dark:text-zinc-400">
-                  Kôkaku kidôtai
-                </p>
+                
               </div>
             </div>
           </Tilt>
@@ -122,16 +116,14 @@ const Advertise = () => {
             >
               <img
                 src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
-                alt="Ghost in the shell - Kôkaku kidôtai"
-                className="h-32 sm:h-40 md:h-48 w-full object-cover"
+                alt="Feature"
+                className="h-48 md:h-48 w-full object-cover"
               />
               <div className="p-2">
-                <h1 className="font-mono leading-snug text-zinc-950 dark:text-zinc-50">
+                <h1 className="font-mono text-center leading-snug text-zinc-950 dark:text-zinc-50">
                   Ghost in the Shell
                 </h1>
-                <p className="text-zinc-700 dark:text-zinc-400">
-                  Kôkaku kidôtai
-                </p>
+                
               </div>
             </div>
           </Tilt>{" "}
